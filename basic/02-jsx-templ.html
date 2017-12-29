@@ -1,0 +1,32 @@
+<div id="root"></div>
+<script src="https://unpkg.com/react@16.0.0-rc.3/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16.0.0-rc.3/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+<script type="text/babel">
+const rootElemnet = document.getElementById("root")
+// Using Browser DOM & JavaScript
+// const element = document.createElement('div')
+// element.textContent = "Hello World"
+// element.className = "container"
+// rootElemnet.appendChild(element)
+
+// Using React
+// const element = React.createElement('div', {
+//     className: 'container',
+//     children: ['Hello World']
+// })
+
+// Using JSX template
+const props = {
+  className: 'container',
+  children: 'Hello World with JSX'
+}
+// Any javascript in {} will be evaluated. 
+
+const element = <div {...props} />
+console.log(element)
+ReactDOM.render(element, rootElemnet)
+
+
+</script>
